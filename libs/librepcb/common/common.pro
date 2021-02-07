@@ -122,6 +122,7 @@ SOURCES += \
     network/networkaccessmanager.cpp \
     network/networkrequest.cpp \
     network/networkrequestbase.cpp \
+    network/orderpcbapirequest.cpp \
     network/repository.cpp \
     pnp/pickplacecsvwriter.cpp \
     pnp/pickplacedata.cpp \
@@ -273,6 +274,7 @@ HEADERS += \
     network/networkaccessmanager.h \
     network/networkrequest.h \
     network/networkrequestbase.h \
+    network/orderpcbapirequest.h \
     network/repository.h \
     norms.h \
     pnp/pickplacecsvwriter.h \
