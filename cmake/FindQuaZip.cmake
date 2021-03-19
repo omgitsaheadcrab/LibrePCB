@@ -2,6 +2,9 @@ set(QUAZIP_SUBMODULE_BASEPATH "${PROJECT_SOURCE_DIR}/libs/quazip")
 if(EXISTS "${QUAZIP_SUBMODULE_BASEPATH}" AND NOT UNBUNDLE_QUAZIP AND NOT UNBUNDLE_ALL)
     message(STATUS "Using vendored QuaZip")
 
+    # We don't need to support installation when using the lib as a submodule
+    set(QUAZIP_INSTALL OFF CACHE BOOL "" FORCE)
+
     # Include local submodule
     add_subdirectory(
         "${QUAZIP_SUBMODULE_BASEPATH}"
