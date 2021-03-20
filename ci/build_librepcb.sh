@@ -42,8 +42,8 @@ echo "Using CFLAGS=$CFLAGS"
 echo "Using CXXFLAGS=$CXXFLAGS"
 mkdir -p build && pushd build
 cmake .. -DCMAKE_INSTALL_PREFIX=$(pwd)/install/opt
-VERBOSE=1 make -j8
-make install
+VERBOSE=1 $MAKE -j8
+$MAKE install
 popd
 
 # Prepare artifacts directory
