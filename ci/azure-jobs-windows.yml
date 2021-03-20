@@ -35,9 +35,7 @@ jobs:
     - bash: ./ci/build_installer.sh
       displayName: Build Installer
       condition: and(succeeded(), eq(variables['DEPLOY'], 'true'))
-    - script: build\\output\\qztest.exe
-      displayName: Run QuaZip Unittests
-    - script: build\\output\\librepcb-unittests.exe
+    - script: build\\tests\\unittests\\librepcb-unittests.exe
       displayName: Run LibrePCB Unittests
     - script: pytest -v --librepcb-executable="build/install/opt/bin/librepcb-cli.exe" ./tests/cli
       displayName: Run LibrePCB-CLI Functional Tests
